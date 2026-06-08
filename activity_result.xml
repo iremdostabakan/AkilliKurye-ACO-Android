@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F8F0FB"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/tvResultBaslik"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📍 Rota Sonuçları"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#4A0E4E"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tvResultSonuc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Rota yükleniyor..."
+        android:textSize="16sp"
+        android:textColor="#333333"/>
+
+    <Button
+        android:id="@+id/btnResultGeri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ana Sayfaya Dön"
+        android:backgroundTint="#D8BFD8"
+        android:textColor="#4A0E4E"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
