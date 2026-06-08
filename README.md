@@ -1,18 +1,23 @@
-# 🚚 Akıllı Kurye: Karınca Kolonisi Optimizasyonu (ACO)
+🚚 Akıllı Kurye: Karınca Kolonisi Optimizasyonu (ACO) & Karar Destek Sistemi
+Bu proje, bir mobil uygulama üzerinden kuryelerin gün içindeki teslimat rotalarını Karınca Kolonisi Optimizasyonu (ACO) algoritması kullanarak en kısa ve verimli şekilde planlayan, modern mimariye sahip bir Android uygulamasıdır.
 
-Bu proje, bir mobil uygulama üzerinden kuryelerin gün içindeki teslimat rotalarını **Karınca Kolonisi Optimizasyonu (ACO)** algoritması kullanarak en kısa ve verimli şekilde planlayan bir Android uygulamasıdır.
 
-## 🌟 Projenin Amacı ve Özellikleri
-Sıradan bir listeleme uygulamasının ötesinde, arka planda çalışan matematiksel bir optimizasyon motoruna sahiptir. Bandırma içindeki 14 farklı gerçek teslimat noktası arasında simülasyon yapar.
+🌟 Projenin Amacı ve Özellikleri
+Sıradan bir listeleme uygulamasının ötesinde, arka planda çalışan matematiksel bir optimizasyon motoruna sahiptir. Bandırma içindeki 14 farklı gerçek teslimat noktası (Kampüs, Hastane, Liman AVM vb.) arasında akıllı simülasyon yapar.
 
-* **Algoritmik Altyapı:** Arayüz (Activity) ile Algoritma (Java Class) mimarisi temiz bir şekilde birbirinden ayrılmıştır.
-* **Modern UI/UX:** Kullanıcı dostu soft renk paleti (Lila/Pembe), dinamik sonuç kartları (CardView) ve özel açılış ekranı (Splash Screen) barındırır.
-* **Hızlı Sonuç:** API bağımlılığı olmadan, gömülü mesafe matrisi ile saniyeler içinde anlık rota çizer.
+📱 Çoklu Aktivite Mimarisi: Uygulama kullanıcı deneyimini artırmak için en az 3 farklı ekrandan oluşur. Açılışta lila tonlarında bir SplashActivity, rota seçiminin yapıldığı MainActivity ve sonuçların listelendiği ResultActivity ekranları bulunur.
 
-## 🛠️ Kullanılan Teknolojiler
-* Java
-* Android Studio (XML Layouts, CardView, ScrollView)
-* Heuristic Ant Colony Algorithm (Nearest Neighbor Adaptasyonu)
+💾 Veri Yönetimi (Yerel Veri Tabanı): Uygulamada SQLite (DatabaseHelper) mimarisi kurulmuştur. Algoritmanın hesapladığı "En Son Başarılı Rota" ve toplam mesafe bilgileri yerel veri tabanında güvenli bir şekilde saklanır.
 
-## 📱 Ekran Görüntüleri
-*(Buraya daha sonra uygulamanın lila açılış ekranı ve rota fişi ekranının ekran görüntülerini ekleyebilirsin)*
+🌤️ Dış Servis Entegrasyonu (API): Kuryelerin saha operasyonlarını desteklemek amacıyla Open-Meteo API entegrasyonu yapılmıştır. Uygulama açıldığında arka planda (AsyncTask) anlık hava durumu verilerini çekerek kuryeye bölge sıcaklığını gösterir.
+
+📐 Algoritmik Altyapı: Arayüz (Activity) ile optimizasyon algoritması (Java Class) mimarisi temiz bir şekilde birbirinden ayrılmıştır.
+
+🛠️ Kullanılan Teknolojiler & Kütüphaneler
+Dil/Geliştirme Ortamı: Java, Android Studio (XML Layouts, CardView, ScrollView, LinearLayout)
+
+Veri Tabanı: SQLite (Yerel Veri Yönetimi için)
+
+Ağ Servisleri: HttpURLConnection, JSON Parsing (Hava Durumu API'si için)
+
+Algoritma: Heuristic Ant Colony Algorithm (Nearest Neighbor Adaptasyonu)
